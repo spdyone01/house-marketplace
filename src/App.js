@@ -11,6 +11,9 @@ import Profile from './pages/Profile';
 import SignIn from './pages/SignIn';
 import SignUp from './pages/SignUp';
 import CreateListing  from './pages/CreateListing';
+import EditListing from './pages/EditListing';
+import Listing from './pages/Listing'
+import Contact from './pages/Contact';
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
           </Route>
           <Route path='/sign-in' element={<SignIn />}></Route>
           <Route path='/create-listing' element={<CreateListing />}></Route>
+          <Route path='/edit-listing/:listingId' element={<EditListing />}></Route>
+          <Route path='/category/:categoryName/:listingId' element={<Listing />}></Route>
+          <Route path='/contact/:landlordId' element={<Contact />}></Route>
           <Route path='/sign-up' element={<SignUp />}></Route>
           <Route path='/forgot-password' element={<ForgotPassword />}></Route>
         </Routes>

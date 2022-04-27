@@ -701,6 +701,10 @@ button {
   align-items: center;
 }
 
+.swiper {
+  height: 300px;
+}
+
 .listingText {
   margin-top: 3rem;
   font-weight: 600;
