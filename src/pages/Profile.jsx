@@ -92,13 +92,15 @@ function Profile() {
   const onDelete = async (listingId) => {
     if (window.confirm('Are you sure you want to delete?')) {
       await deleteDoc(doc(db, 'listings', listingId));
-      const updatedListings = listings.filter((listing) => listing.id !== listingId)
-      setListings(updatedListings)
-      toast.success('Successfully deleted listing')
+      const updatedListings = listings.filter(
+        (listing) => listing.id !== listingId
+      );
+      setListings(updatedListings);
+      toast.success('Successfully deleted listing');
     }
   };
 
-  const onEdit = (listingId) => navigate(`/edit-listing/${listingId}`)
+  const onEdit = (listingId) => navigate(`/edit-listing/${listingId}`);
 
   return (
     <div className='profile'>

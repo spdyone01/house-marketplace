@@ -17,6 +17,10 @@ function SignIn() {
 
   const navigate = useNavigate();
 
+  const handlePassVisibility = () => {
+    setShowPassword((prevState) => !prevState)
+  }
+
   const onChange = (e) => {
     setFormData((prevState) => ({
       ...prevState,
@@ -74,7 +78,7 @@ function SignIn() {
               src={visibilityIcon}
               alt='show password'
               className='showPassword'
-              onClick={(prevState) => !prevState}
+              onClick={handlePassVisibility}
             />
           </div>
 
